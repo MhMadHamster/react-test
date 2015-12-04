@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class User extends Component {
+class User extends React.Component {
     render() {
         return (
             <li>
@@ -11,7 +11,7 @@ class User extends Component {
 }
 
 User.propTypes = {
-    user: React.PropTypes.object.isRequired
+  user: React.PropTypes.object.isRequired
 }
 
-export default User
+export default User;
