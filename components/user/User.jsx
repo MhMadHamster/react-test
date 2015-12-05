@@ -1,13 +1,13 @@
 import React from 'react';
 
 class User extends React.Component {
-    render() {
-        return (
-            <li>
-                {this.props.user.name}
-            </li>
-        )
-    }
+  render() {
+    return (
+      <li>
+        {this.props.user.name}
+      </li>
+    )
+  }
 }
 
 User.propTypes = {
