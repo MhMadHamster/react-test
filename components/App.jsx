@@ -3,6 +3,8 @@ import ChannelSection from './channels/ChannelSection.jsx';
 import UserSection from './user/UserSection.jsx';
 import MessageSection from './messages/MessageSection.jsx';
 
+import '../styles/base.css';
+
 class App extends Component {
   constructor(props) {
     super(props);

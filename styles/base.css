@@ -1,0 +1,9 @@
+:root {
+  --mainColor: #777;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  clear: fix;
+}
