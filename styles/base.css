@@ -27,16 +27,16 @@ body,
     align-content: stretch;
     flex-wrap: nowrap;
     order: 0;
-    flex: 0 1 300px;
+    height: 100%;
+    flex: 0 0 300px;
 
     .panel {
       display: flex;
       flex-direction: column;
       order: 0;
-      flex: 1 1 auto;
+      flex: 0 0 50%;
       box-sizing: border-box;
       border: 2px solid var(--mainColor);
-      position: relative;
 
       &-heading {
         background-color: var(--mainColor);
@@ -56,6 +56,10 @@ body,
 
         .list-wrapper {
           flex: 1 1 auto;
+
+          ul {
+            list-style: none;
+          }
         }
       }
 
@@ -65,6 +69,10 @@ body,
         border-bottom: 2px solid var(--mainColor);
         padding-bottom: 5px;
         font-size: 16px;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }

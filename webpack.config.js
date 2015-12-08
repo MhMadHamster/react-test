@@ -3,6 +3,7 @@ var cssnext = require('cssnext');
 var clearfix = require('postcss-clearfix');
 var prefix = require('autoprefixer');
 var fontMagician = require('postcss-font-magician');
+var normalize = require('postcss-normalize');
 
 module.exports = {
   entry: './index.js',
@@ -26,6 +27,6 @@ module.exports = {
     ]
   },
   postcss: function() {
-    return [prefix, precss, cssnext, fontMagician, clearfix];
+    return [normalize, prefix, precss, cssnext, fontMagician, clearfix];
   }
 }
