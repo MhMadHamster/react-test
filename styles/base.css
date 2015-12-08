@@ -1,9 +1,76 @@
 :root {
-  --mainColor: #777;
-  margin: 0;
-  padding: 0;
+  --mainColor: #1E8BC3;
+  font-family: 'PT Sans';
+  font-size: 14px;
 }
 
-.nav {
-  clear: fix;
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+
+  .panel-container {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    order: 0;
+    flex: 0 1 300px;
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      order: 0;
+      flex: 1 1 auto;
+      box-sizing: border-box;
+      border: 2px solid var(--mainColor);
+      position: relative;
+
+      &-heading {
+        background-color: var(--mainColor);
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+
+      &-body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        padding: 15px;
+        flex-direction: column;
+
+        .list-wrapper {
+          flex: 1 1 auto;
+        }
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid var(--mainColor);
+        padding-bottom: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .message-container {
+    order: 0;
+    flex: 1 1 auto;
+  }
 }

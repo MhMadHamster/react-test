@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <div className='nav'>
+        <div className='panel-container'>
           <ChannelSection
             {...this.state}
             addChannel={this.addChannel.bind(this)}
@@ -48,11 +48,11 @@ class App extends Component {
             {...this.state}
             setUserName={this.setUserName.bind(this)}
           />
-          <MessageSection
-            {...this.state}
-            addMessage={this.addMessage.bind(this)}
-          />
         </div>
+        <MessageSection
+          {...this.state}
+          addMessage={this.addMessage.bind(this)}
+        />
       </div>
     )
   }

@@ -5,11 +5,11 @@ import UserForm from './UserForm.jsx';
 class UserSection extends React.Component {
   render() {
     return (
-      <div className='support panel panel-primary'>
+      <div className='panel'>
         <div className='panel-heading'>
           <b>Users</b>
         </div>
-        <div className='panel-body users'>
+        <div className='panel-body'>
           <UserList {...this.props} />
           <UserForm {...this.props} />
         </div>
