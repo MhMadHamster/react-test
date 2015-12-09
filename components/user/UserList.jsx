@@ -1,10 +1,12 @@
 import React from 'react';
 import User from './User.jsx';
 
+import styles from '../../styles/base.css';
+
 class UserList extends React.Component {
   render() {
     return (
-      <div className='list-wrapper'>
+      <div className={styles.list_wrapper}>
         <ul>{
           this.props.users.map(user => {
             return (

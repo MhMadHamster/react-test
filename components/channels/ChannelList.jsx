@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Channel from './Channel.jsx';
 
+import styles from '../../styles/base.css';
+
 class ChannelList extends Component {
   render() {
     return (
-      <div className='list-wrapper'>
+      <div className={styles.list_wrapper}>
         <ul>{
           this.props.channels.map(chan => {
             return <Channel

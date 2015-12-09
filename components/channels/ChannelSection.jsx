@@ -2,14 +2,16 @@ import React, {Component} from 'react';
 import ChannelForm from './ChannelForm.jsx';
 import ChannelList from './ChannelList.jsx';
 
+import styles from '../../styles/base.css';
+
 class ChannelSection extends Component {
   render() {
     return (
-      <div className='panel'>
-        <div className='panel-heading'>
+      <div className={styles.panel}>
+        <div className={styles.panel_heading}>
           <strong>Channels</strong>
         </div>
-        <div className='panel-body'>
+        <div className={styles.panel_body}>
           <ChannelList {...this.props} />
           <ChannelForm {...this.props} />
         </div>

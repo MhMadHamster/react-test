@@ -3,7 +3,7 @@ import ChannelSection from './channels/ChannelSection.jsx';
 import UserSection from './user/UserSection.jsx';
 import MessageSection from './messages/MessageSection.jsx';
 
-import '../styles/base.css';
+import styles from '../styles/base.css';
 
 class App extends Component {
   constructor(props) {
@@ -37,8 +37,8 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='app'>
-        <div className='panel-container'>
+      <div className={styles.app}>
+        <div className={styles.panel_container}>
           <ChannelSection
             {...this.state}
             addChannel={this.addChannel.bind(this)}

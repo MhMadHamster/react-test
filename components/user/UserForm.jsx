@@ -14,7 +14,6 @@ class UserForm extends React.Component {
         <input
           ref='userName'
           type='text'
-          className='form-control'
           placeholder='Set your name'
         />
       </form>
