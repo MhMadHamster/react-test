@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import styles from '../../styles/base.css';
+
 class Channel extends Component {
   onClick(e) {
     e.preventDefault();
@@ -8,7 +10,7 @@ class Channel extends Component {
   }
   render() {
     const {channel, activeChannel} = this.props;
-    const active = channel === activeChannel ? 'active' : ''
+    const active = channel === activeChannel ? styles.active : ''
     return (
       <li className={active}>
         <a onClick={this.onClick.bind(this)}>

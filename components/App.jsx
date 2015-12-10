@@ -13,7 +13,9 @@ class App extends Component {
       channels: [],
       users: [],
       messages: [],
-      activeChannel: {}
+      activeChannel: {
+        name: 'Choose channel'
+      }
     };
   }
   addChannel(name) {

@@ -2,15 +2,16 @@ import React from 'react';
 import MessageList from './MessageList.jsx';
 import MessageForm from './MessageForm.jsx';
 
-import styles from '../../styles/base.css';
+import panel from '../../styles/panel.css';
+import message from '../../styles/message.css';
 
 class MessageSection extends React.Component {
   render() {
     let {activeChannel} = this.props;
     return (
-      <div className={styles.message_cotnainer}>
-        <div className={styles.panel_heading}>{activeChannel.name}</div>
-        <div className={styles.panel_body}>
+      <div className={message.messageContainer}>
+        <div className={panel.panel_heading}>{activeChannel.name}</div>
+        <div className={panel.panel_body}>
           <MessageList {...this.props} />
           <MessageForm {...this.props} />
         </div>
