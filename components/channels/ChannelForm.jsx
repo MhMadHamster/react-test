@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ChannelForm extends Component {
+class ChannelForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     if(!this.refs.channel.value) return;

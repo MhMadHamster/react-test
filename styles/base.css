@@ -1,14 +1,15 @@
-:root {
-  --mainColor: #1E8BC3;
-  font-family: 'PT Sans';
-  font-size: 14px;
-}
+@import './variables.css';
 
 html,
 body,
 :global(#root) {
   width: 100%;
   height: 100%;
+}
+
+body {
+  font-family: 'PT Sans';
+  font-size: 14px;
 }
 
 .app {
@@ -18,65 +19,24 @@ body,
   flex-wrap: nowrap;
   width: 100%;
   height: 100%;
+}
 
-  .panel_container {
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    order: 0;
-    height: 100%;
-    flex: 0 0 300px;
+.list_wrapper {
+  flex: 1 1 auto;
 
-    .panel {
-      display: flex;
-      flex-direction: column;
-      order: 0;
-      flex: 0 0 50%;
-      box-sizing: border-box;
-      border: 2px solid var(--mainColor);
-
-      &_heading {
-        background-color: var(--mainColor);
-        box-sizing: border-box;
-        padding: 10px;
-        font-size: 1.2rem;
-        color: #fff;
-      }
-
-      &_body {
-        display: flex;
-        flex: 1 1 auto;
-        flex-wrap: nowrap;
-        box-sizing: border-box;
-        padding: 15px;
-        flex-direction: column;
-
-        .list_wrapper {
-          flex: 1 1 auto;
-
-          ul {
-            list-style: none;
-          }
-        }
-      }
-
-      input {
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid var(--mainColor);
-        padding-bottom: 5px;
-        font-size: 16px;
-
-        &:focus {
-          outline: none;
-        }
-      }
-    }
+  ul {
+    list-style: none;
   }
+}
 
-  .message_container {
-    order: 0;
-    flex: 1 1 auto;
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  padding-bottom: 5px;
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
   }
 }

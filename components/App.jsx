@@ -4,6 +4,7 @@ import UserSection from './user/UserSection.jsx';
 import MessageSection from './messages/MessageSection.jsx';
 
 import styles from '../styles/base.css';
+import panel from '../styles/panel.css';
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <div className={styles.panel_container}>
+        <div className={panel.panel_container}>
           <ChannelSection
             {...this.state}
             addChannel={this.addChannel.bind(this)}

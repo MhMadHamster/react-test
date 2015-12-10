@@ -4,6 +4,7 @@ var clearfix = require('postcss-clearfix');
 var prefix = require('autoprefixer');
 var fontMagician = require('postcss-font-magician');
 var normalize = require('postcss-normalize');
+var postcssImport = require('postcss-import');
 
 module.exports = {
   entry: './index.js',
@@ -27,6 +28,14 @@ module.exports = {
     ]
   },
   postcss: function() {
-    return [normalize, prefix, precss, cssnext, fontMagician, clearfix];
+    return [
+      postcssImport,
+      normalize,
+      prefix,
+      precss,
+      cssnext,
+      fontMagician,
+      clearfix
+    ];
   }
 }
